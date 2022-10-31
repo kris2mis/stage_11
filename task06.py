@@ -1,11 +1,12 @@
 # Необходимо разработать программу, которая проверяет, что все элементы
-# вектора находятся в упорядоченном виде, т.е. отсортированы по возрастанию
-# или убыванию.
+# вектора различны/одинаковы/
 
-
-def is_ls_sequense(ls):
-    for i in range(len(ls) - 1):
-        return ls[i] < ls[i + 1]
+def check_the_same_elements(ls):
+    for element in range(len(ls) - 1):
+        if ls[element] == ls[element + 1]:
+            return True
+        else:
+            return False
 
 
 def main():
@@ -18,9 +19,9 @@ def main():
             break
         ls.append(int(number))
 
-    result = is_ls_sequense(ls)
+    result = check_the_same_elements(ls)
 
-    msg = (f"It is {result}.")
+    msg = (f"All elements of list are the same - {result}.")
 
     print(ls)
     print(msg)
