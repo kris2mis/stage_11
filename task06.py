@@ -9,6 +9,7 @@ def check_the_same_elements(ls):
             return False
 
 
+
 def main():
     ls = []
     print("Input elements of list. For exit input '-1'.")
